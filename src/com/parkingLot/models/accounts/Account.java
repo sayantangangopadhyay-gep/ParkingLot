@@ -15,4 +15,32 @@ public abstract class Account extends DBObject {
         this.person = person;
         this.status = AccountStatus.ACTIVE;
     }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getSaltedPasswordHash() {
+        return saltedPasswordHash;
+    }
+
+    public void setSaltedPasswordHash(String saltedPasswordHash) {
+        this.saltedPasswordHash = saltedPasswordHash;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public AccountStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(AccountStatus status) {
+        this.status = status;
+    }
 }

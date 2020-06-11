@@ -12,4 +12,24 @@ public abstract class Vehicle extends DBObject {
     public Vehicle(VehicleType type) {
         this.type = type;
     }
+
+    public String getPlateNumber() {
+        return plateNumber;
+    }
+
+    public void setPlateNumber(String plateNumber) {
+        this.plateNumber = plateNumber;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public VehicleType getType() {
+        return type;
+    }
 }
