@@ -1,6 +1,7 @@
 package com.parkingLot.models.vehicles;
 
 import com.parkingLot.models.DBObject;
+import com.parkingLot.models.parking.Ticket;
 
 //abstract class cant be instantiated
 public abstract class Vehicle extends DBObject {
@@ -8,6 +9,8 @@ public abstract class Vehicle extends DBObject {
     private String color;
     //we create this enum to avoid create multiple subclasses from vehicle class
     private final VehicleType type; //  vehicle type can't be changed
+
+    private Ticket ticket;
 
     public Vehicle(VehicleType type) {
         this.type = type;
@@ -31,5 +34,12 @@ public abstract class Vehicle extends DBObject {
 
     public VehicleType getType() {
         return type;
+    }
+
+    public Ticket showTicket(){
+        return ticket;
+    }
+    public void assignTicket(Ticket ticket){
+        this.ticket = ticket;
     }
 }
